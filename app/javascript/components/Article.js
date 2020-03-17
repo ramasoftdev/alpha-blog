@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
+import Timestamp from 'react-timestamp';
 
 class Article extends React.Component {
   
@@ -19,14 +20,28 @@ class Article extends React.Component {
             <small> 
               Created by: {this.props.author},
               &nbsp;
-              <Moment fromNow>{created_at}</Moment>,
+              <Timestamp relative date={this.props.created_at} />,
               &nbsp;
-              last updated: <Moment fromNow>{updated_at}</Moment>
+              last updated: <Timestamp relative date={this.props.updated_at} />,
+              &nbsp;
             </small>  
           </div>
         </div>
       </React.Fragment>
     );
+  }
+
+  componentDidMount(){
+    var self = this;
+    setInterval(function() { self.forceUpdate() }, 1000); //Esta funcion actualiza cada 5 minutos el estado de; render()
+  }
+
+  componentWillUnmount(){
+    // var self = this;
+    if (this._timer){
+      clearInterval(this._timer);
+      this._timer = null;
+    }
   }
 }
 

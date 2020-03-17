@@ -12,6 +12,7 @@
     "react-datetime": "^2.16.3",
     "react-dom": "^16.13.0",
     "react-moment": "^0.9.7",
+    "react-timestamp": "^5.1.0",
     "react_ujs": "^2.6.1"
   },
   "devDependencies": {
