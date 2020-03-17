@@ -5,9 +5,13 @@
     "@babel/preset-react": "^7.8.3",
     "@rails/webpacker": "^4.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "core-js": "^3.6.4",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
+    "react-datetime": "^2.16.3",
     "react-dom": "^16.13.0",
+    "react-moment": "^0.9.7",
     "react_ujs": "^2.6.1"
   },
   "devDependencies": {
