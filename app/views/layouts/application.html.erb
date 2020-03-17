@@ -13,8 +13,6 @@
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     <div class="container">
-      <!-- erb: paste this in view -->
-      <%= react_component("HelloWorld", { greeting: "Hi" }) %>
       <%= yield %>
     </div>
     <%= render 'layouts/footer' %>
