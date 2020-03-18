@@ -8,4 +8,8 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REGEX }
   has_secure_password
+
+  def return_user_color
+  	color.nil? ? '#fff' : (color.blank?) ? '#fff' : color
+  end
 end

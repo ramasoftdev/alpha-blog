@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // import Moment from 'react-moment';
 import Timestamp from 'react-timestamp';
@@ -33,7 +33,7 @@ class Article extends React.Component {
 
   componentDidMount(){
     var self = this;
-    setInterval(function() { self.forceUpdate() }, 1000); //Esta funcion actualiza cada 5 minutos el estado de; render()
+    setInterval(function() { self.forceUpdate() }, 5000); //Esta funcion actualiza cada 5 minutos el estado de; render()
   }
 
   componentWillUnmount(){
